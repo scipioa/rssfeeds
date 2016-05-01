@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.web.WebView?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="563.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="rssfeeds.controllers.ControllerMainWindow">
+   <children>
+      <MenuBar>
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+                  <MenuItem mnemonicParsing="false" onAction="#disconnect" text="Disconnect" />
+              <MenuItem mnemonicParsing="false" onAction="#btnExit" text="Close" />
+            </items>
+          </Menu>
+            <Menu mnemonicParsing="false" text="Feeds">
+              <items>
+                  <MenuItem mnemonicParsing="false" onAction="#addToFav" text="Add to favorites" />
+                <MenuItem mnemonicParsing="false" onAction="#rmFav" text="Remove of favorites" />
+                  <MenuItem mnemonicParsing="false" onAction="#update" text="Update" />
+              </items>
+            </Menu>
+        </menus>
+      </MenuBar>
+      <HBox prefHeight="532.0" prefWidth="744.0" VBox.vgrow="ALWAYS">
+         <children>
+            <VBox prefHeight="200.0" prefWidth="300.0" HBox.hgrow="ALWAYS">
+               <children>
+                  <ListView fx:id="listFeeds" maxWidth="400.0" onMouseClicked="#handleMouseClickAllFeeds" prefHeight="300.0" prefWidth="300.0" VBox.vgrow="ALWAYS" />
+                  <Separator prefWidth="200.0" />
+                  <Label text="Favoris:" />
+                  <ListView fx:id="favoris" onMouseClicked="#handleClickFav" prefHeight="300.0" prefWidth="200.0" VBox.vgrow="ALWAYS" />
+               </children>
+            </VBox>
+            <ListView fx:id="listItems" maxWidth="400.0" onMouseClicked="#handleMouseClickAllItems" prefHeight="400.0" prefWidth="300.0" />
+            <WebView fx:id="content" prefHeight="601.0" prefWidth="600.0" HBox.hgrow="ALWAYS" />
+         </children>
+      </HBox>
+   </children>
+</VBox>

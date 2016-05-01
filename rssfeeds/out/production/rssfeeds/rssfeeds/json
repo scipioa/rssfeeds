@@ -1,0 +1,7 @@
+Mapped "[/users/sign_up], methods=[POST], produces=[application/json, body_param=[email, password]"
+Mapped "[/users/sign_in], methods=[POST], produces=[application/json], body_param=[email, password]"
+Mapped "[/users/{userId}], methods=[GET], produces=[application/json]"
+Mapped "[/users],methods=[GET], produces=[application/json]"
+Mapped "[/users],methods=[PUT], produces=[application/json], body_param=[firstname, lastname, email, password]"
+Mapped "[/feeds/create], methods=[POST], produces=[application/json], body_param=[url]"Mapped "{[/feeds/{feedId}],methods=[GET],produces=[application/json]}"
+Mapped "{[/feeds/{feedId}/items],methods=[GET],produces=[application/json]}"

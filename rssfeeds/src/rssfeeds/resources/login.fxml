@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<GridPane alignment="center" hgap="10" vgap="10" xmlns="http://javafx.com/javafx/null" xmlns:fx="http://javafx.com/fxml/1" fx:controller="rssfeeds.controllers.ControllerLogin">
+
+    <Label text="Login:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+    <TextField fx:id="loginField" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+    <Label fx:id="badLogin" text="Please enter an Email" visible="false" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+
+    <Label text="Password:" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+    <PasswordField fx:id="passwordField" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+    <Label fx:id="badPass" text="Please enter a password" visible="false" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+
+    <Button fx:id="btnLogin" onAction="#doLogin" prefHeight="25.0" prefWidth="149.0" text="Login" GridPane.columnIndex="1" GridPane.rowIndex="5">
+      <opaqueInsets>
+         <Insets left="50.0" />
+      </opaqueInsets></Button>
+   <Hyperlink onMouseClicked="#goToCreate" text="create account" GridPane.rowIndex="5" />
+    <Label text="Login" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="0">
+      <font>
+         <Font size="51.0" />
+      </font></Label>
+   <columnConstraints>
+      <ColumnConstraints />
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+   </rowConstraints>
+</GridPane>
